@@ -310,72 +310,33 @@
   #projects { background: var(--bg); }
   .projects-grid {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 2px;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
   }
 
   .project-card {
     background: var(--bg2);
     border: 1px solid var(--border);
+    border-radius: 6px;
     overflow: hidden;
-    transition: all 0.3s;
+    transition: all 0.3s ease;
     position: relative;
     cursor: none;
+    box-shadow: 0 2px 12px rgba(0,0,0,0.25);
   }
-  .project-card:hover { border-color: var(--accent); }
-  .project-card:hover .project-img-placeholder { transform: scale(1.03); }
-  .project-card.featured {
-    grid-column: span 2;
+  .project-card:hover {
+    border-color: var(--accent);
+    transform: translateY(-5px);
+    box-shadow: 0 12px 32px rgba(0,0,0,0.45), 0 0 0 1px rgba(0,255,136,0.08);
   }
 
   .project-img-wrap {
     overflow: hidden;
     position: relative;
     background: var(--bg3);
-  }
-  .project-card:not(.featured) .project-img-wrap { height: 240px; }
-  .project-card.featured .project-img-wrap { height: 360px; }
-
-  .project-img-placeholder {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 12px;
-    transition: transform 0.4s ease;
-    position: relative;
+    height: 160px;
   }
 
-  /* Different placeholder colors per card */
-  .ph-moodify { background: linear-gradient(135deg, #0d1f17 0%, #0a1a10 100%); }
-  .ph-finflow { background: linear-gradient(135deg, #0d1520 0%, #0a1018 100%); }
-  .ph-perfume { background: linear-gradient(135deg, #1a1008 0%, #150d05 100%); }
-  .ph-school  { background: linear-gradient(135deg, #0d1520 0%, #081020 100%); }
-
-  .ph-icon {
-    font-size: 48px;
-    opacity: 0.4;
-  }
-  .ph-label {
-    font-family: 'Syne', sans-serif;
-    font-weight: 700;
-    font-size: 13px;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    opacity: 0.3;
-    color: var(--text);
-  }
-  .ph-sublabel {
-    font-size: 10px;
-    letter-spacing: 0.2em;
-    text-transform: uppercase;
-    opacity: 0.2;
-    color: var(--muted2);
-  }
-
-  /* Live preview images */
   .project-img {
     width: 100%;
     height: 100%;
@@ -383,100 +344,66 @@
     object-position: top;
     display: block;
     transition: transform 0.4s ease;
-    filter: brightness(0.92);
+    filter: brightness(0.9);
   }
   .project-card:hover .project-img {
-    transform: scale(1.03);
+    transform: scale(1.05);
     filter: brightness(1);
   }
 
-  /* Dashed border inside placeholder */
-  .project-img-placeholder::after {
-    content: '';
-    position: absolute;
-    inset: 16px;
-    border: 1px dashed rgba(255,255,255,0.06);
-    pointer-events: none;
-  }
-
-  /* Upload hint on hover */
-  .upload-hint {
-    position: absolute;
-    inset: 0;
-    background: rgba(0,255,136,0.05);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    opacity: 0;
-    transition: opacity 0.3s;
-  }
-  .project-card:hover .upload-hint { opacity: 1; }
-  .upload-hint span {
-    font-size: 11px;
-    letter-spacing: 0.15em;
-    text-transform: uppercase;
-    color: var(--accent);
-    background: rgba(0,0,0,0.8);
-    padding: 8px 16px;
-    border: 1px solid var(--accent);
-  }
-
-  .project-info { padding: 24px; }
+  .project-info { padding: 18px 20px 20px; }
   .project-meta {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 12px;
+    margin-bottom: 10px;
   }
   .project-tag {
-    font-size: 10px;
-    letter-spacing: 0.15em;
+    font-size: 9px;
+    letter-spacing: 0.12em;
     text-transform: uppercase;
     color: var(--accent);
-    background: rgba(0,255,136,0.08);
-    padding: 4px 10px;
+    background: rgba(0,255,136,0.07);
+    padding: 3px 8px;
     border: 1px solid rgba(0,255,136,0.15);
   }
-  .project-year { font-size: 11px; color: var(--muted); }
+  .project-year { font-size: 10px; color: var(--muted); }
   .project-name {
     font-family: 'Syne', sans-serif;
     font-weight: 700;
-    font-size: 22px;
-    letter-spacing: -0.5px;
+    font-size: 16px;
+    letter-spacing: -0.3px;
     margin-bottom: 8px;
   }
   .project-desc {
-    font-size: 12px;
+    font-size: 11px;
     line-height: 1.7;
     color: var(--muted2);
-    margin-bottom: 20px;
+    margin-bottom: 16px;
   }
-  .project-links {
-    display: flex;
-    gap: 12px;
-  }
+  .project-links { display: flex; gap: 14px; }
   .project-link {
-    font-size: 11px;
+    font-size: 10px;
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: var(--muted2);
     text-decoration: none;
     display: flex;
     align-items: center;
-    gap: 6px;
+    gap: 5px;
     transition: color 0.2s;
-    padding: 6px 0;
+    padding: 5px 0;
     border-bottom: 1px solid var(--border);
   }
   .project-link:hover { color: var(--accent); border-bottom-color: var(--accent); }
-  .project-link svg { width: 12px; height: 12px; }
+  .project-link svg { width: 11px; height: 11px; }
 
   /* SERVICES */
   #services { background: var(--bg2); }
   .services-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
-    gap: 2px;
+    gap: 24px;
   }
   .service-card {
     background: var(--bg);
@@ -640,6 +567,10 @@
   @keyframes scrollLine { 0% { left: -100%; } 100% { left: 100%; } }
 
   /* Mobile */
+  @media (max-width: 1024px) {
+    .projects-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+  }
+
   @media (max-width: 768px) {
     nav { padding: 20px 24px; }
     .nav-links { display: none; }
@@ -647,10 +578,10 @@
     .hero { padding: 100px 24px 60px; }
     .hero-stats { display: none; }
     .about-grid, .contact-grid { grid-template-columns: 1fr; gap: 48px; }
-    .projects-grid { grid-template-columns: 1fr; }
-    .project-card.featured { grid-column: span 1; }
-    .project-card.featured .project-img-wrap { height: 220px; }
-    .services-grid { grid-template-columns: 1fr; }
+    .projects-grid { grid-template-columns: 1fr; gap: 16px; }
+    .project-card:hover { transform: none; }
+    .project-img-wrap { height: 180px; }
+    .services-grid { grid-template-columns: 1fr; gap: 16px; }
     footer { flex-direction: column; gap: 16px; text-align: center; }
     .scroll-indicator { display: none; }
   }
@@ -784,10 +715,9 @@
 
   <div class="projects-grid">
 
-    <!-- Moodify — Featured -->
-    <div class="project-card featured fade-in">
+    <div class="project-card fade-in">
       <div class="project-img-wrap">
-        <img src="https://s.wordpress.com/mshots/v1/https%3A%2F%2Fmoodify-music.vercel.app%2F?w=1400&h=720" alt="Moodify preview" class="project-img"/>
+        <img src="https://s.wordpress.com/mshots/v1/https%3A%2F%2Fmoodify-music.vercel.app%2F?w=800&h=400" alt="Moodify" class="project-img"/>
       </div>
       <div class="project-info">
         <div class="project-meta">
@@ -795,13 +725,13 @@
           <span class="project-year">2025</span>
         </div>
         <h3 class="project-name">Moodify</h3>
-        <p class="project-desc">AI-powered music streaming platform built for African artists and listeners. Smart mood-based recommendations, full playlist access, artist analytics, and zero freemium limits. Built in Edo State, Nigeria.</p>
+        <p class="project-desc">AI-powered music platform for African artists. Mood-based recommendations, artist analytics, Firebase auth.</p>
         <div class="project-links">
           <a href="https://moodify-music.vercel.app/" target="_blank" class="project-link">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
             Live Site
           </a>
-          <a href="#" class="project-link">
+          <a href="https://github.com/iyobordean-source" target="_blank" class="project-link">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
             GitHub
           </a>
@@ -809,10 +739,9 @@
       </div>
     </div>
 
-    <!-- FinFlow -->
     <div class="project-card fade-in">
       <div class="project-img-wrap">
-        <img src="https://s.wordpress.com/mshots/v1/https%3A%2F%2Ffinflow-fintech.vercel.app%2F?w=900&h=480" alt="FinFlow preview" class="project-img"/>
+        <img src="https://s.wordpress.com/mshots/v1/https%3A%2F%2Ffinflow-fintech.vercel.app%2F?w=800&h=400" alt="FinFlow" class="project-img"/>
       </div>
       <div class="project-info">
         <div class="project-meta">
@@ -820,13 +749,13 @@
           <span class="project-year">2025</span>
         </div>
         <h3 class="project-name">FinFlow</h3>
-        <p class="project-desc">Modern fintech dashboard with real-time analytics, smart budgeting, and bank-level security UI. Full SaaS landing page with feature breakdown and dashboard mockup.</p>
+        <p class="project-desc">Modern fintech dashboard with real-time analytics, smart budgeting tools, and bank-level security UI.</p>
         <div class="project-links">
           <a href="https://finflow-fintech.vercel.app/" target="_blank" class="project-link">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
             Live Site
           </a>
-          <a href="#" class="project-link">
+          <a href="https://github.com/iyobordean-source" target="_blank" class="project-link">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
             GitHub
           </a>
@@ -834,10 +763,9 @@
       </div>
     </div>
 
-    <!-- Kings Perfumery -->
     <div class="project-card fade-in">
       <div class="project-img-wrap">
-        <img src="https://s.wordpress.com/mshots/v1/https%3A%2F%2Fkings-perfumery.vercel.app%2F?w=900&h=480" alt="Kings Perfumery preview" class="project-img"/>
+        <img src="https://s.wordpress.com/mshots/v1/https%3A%2F%2Fkings-perfumery.vercel.app%2F?w=800&h=400" alt="Kings Perfumery" class="project-img"/>
       </div>
       <div class="project-info">
         <div class="project-meta">
@@ -845,13 +773,13 @@
           <span class="project-year">2025</span>
         </div>
         <h3 class="project-name">King's Perfumery</h3>
-        <p class="project-desc">Luxury perfume e-commerce landing page with product showcase, testimonials, FAQ, and WhatsApp integration. Clean, premium feel built to convert.</p>
+        <p class="project-desc">Luxury perfume landing page with product showcase, testimonials, FAQ, and WhatsApp integration.</p>
         <div class="project-links">
           <a href="https://kings-perfumery.vercel.app/" target="_blank" class="project-link">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
             Live Site
           </a>
-          <a href="#" class="project-link">
+          <a href="https://github.com/iyobordean-source" target="_blank" class="project-link">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
             GitHub
           </a>
@@ -859,24 +787,47 @@
       </div>
     </div>
 
-    <!-- Young Scholars Academy -->
-    <div class="project-card fade-in" style="grid-column: span 2;">
-      <div class="project-img-wrap" style="height: 260px;">
-        <img src="https://s.wordpress.com/mshots/v1/https%3A%2F%2Fyoung-scholars-academy.vercel.app%2F?w=1400&h=520" alt="Young Scholars Academy preview" class="project-img"/>
+    <div class="project-card fade-in">
+      <div class="project-img-wrap">
+        <img src="https://s.wordpress.com/mshots/v1/https%3A%2F%2Fintelops-three.vercel.app%2F?w=800&h=400" alt="IntelOps" class="project-img"/>
       </div>
       <div class="project-info">
         <div class="project-meta">
-          <span class="project-tag">Multi-page · School Website</span>
+          <span class="project-tag">Gaming · Stats · Firebase</span>
           <span class="project-year">2025</span>
         </div>
-        <h3 class="project-name">Young Scholars Academy</h3>
-        <p class="project-desc">Full multi-page website for a private school — homepage, about, admissions, gallery, events, teachers, contact, and student registration. Built to represent a real institution online.</p>
+        <h3 class="project-name">IntelOps</h3>
+        <p class="project-desc">Real-time CODM stats tracker. K/D ratio, win rate, head-to-head player comparison with shareable stat cards.</p>
+        <div class="project-links">
+          <a href="https://intelops-three.vercel.app/" target="_blank" class="project-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            Live Site
+          </a>
+          <a href="https://github.com/iyobordean-source" target="_blank" class="project-link">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
+            GitHub
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="project-card fade-in">
+      <div class="project-img-wrap">
+        <img src="https://s.wordpress.com/mshots/v1/https%3A%2F%2Fyoung-scholars-academy.vercel.app%2F?w=800&h=400" alt="Young Scholars Academy" class="project-img"/>
+      </div>
+      <div class="project-info">
+        <div class="project-meta">
+          <span class="project-tag">Multi-page · Education</span>
+          <span class="project-year">2025</span>
+        </div>
+        <h3 class="project-name">Young Scholars</h3>
+        <p class="project-desc">Full multi-page school website — admissions, gallery, events, staff, and student registration portal.</p>
         <div class="project-links">
           <a href="https://young-scholars-academy.vercel.app/" target="_blank" class="project-link">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
             Live Site
           </a>
-          <a href="#" class="project-link">
+          <a href="https://github.com/iyobordean-source" target="_blank" class="project-link">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"/></svg>
             GitHub
           </a>
@@ -949,11 +900,11 @@
             <span class="contact-item-value">+234 704 340 0958</span>
           </div>
         </a>
-        <a href="https://github.com/" class="contact-item">
+        <a href="https://github.com/iyobordean-source" target="_blank" class="contact-item">
           <span class="contact-item-icon"><i class="fa-brands fa-github"></i></span>
           <div>
             <span class="contact-item-label">GitHub</span>
-            <span class="contact-item-value">github.com/deanghost</span>
+            <span class="contact-item-value">github.com/iyobordean-source</span>
           </div>
         </a>
       </div>
