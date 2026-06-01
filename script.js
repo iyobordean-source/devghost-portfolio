@@ -1,6 +1,14 @@
 const projects = [
   
   { 
+    title: "IntelOps", 
+    tag: "Gaming · Stats", 
+    desc: "Real-time CODM stats tracker — K/D, win rate, head-to-head comparisons.", 
+    url: "https://intelops-three.vercel.app/", 
+    img: "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fintelops-three.vercel.app%2F?w=1200&h=750" 
+  },
+
+  { 
     title: "Barber Shop", 
     tag: "Service · Booking", 
     desc: "Modern barber shop landing page with professional service showcases and appointment CTAs.", 
@@ -21,13 +29,7 @@ const projects = [
     url: "https://kings-perfumery.vercel.app/", 
     img: "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fkings-perfumery.vercel.app%2F?w=1200&h=750" 
   },
-  { 
-    title: "IntelOps", 
-    tag: "Gaming · Stats", 
-    desc: "Real-time CODM stats tracker — K/D, win rate, head-to-head comparisons.", 
-    url: "https://intelops-three.vercel.app/", 
-    img: "https://s.wordpress.com/mshots/v1/https%3A%2F%2Fintelops-three.vercel.app%2F?w=1200&h=750" 
-  },
+  
   { 
     title: "Young Scholars", 
     tag: "Multi-page · Education", 
