@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Dean Iyobor — Software Engineer</title>
+<meta name="description" content="Dean Iyobor is a self-taught software engineer building web applications and business systems around real problems. Explore projects, skills and approach.">
+<meta name="author" content="Dean Iyobor">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Dean Iyobor — Software Engineer">
+<meta property="og:description" content="I build software that solves real problems.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="assets/images/og-cover.jpg">
+
+<link rel="icon" href="assets/images/favicon.svg" type="image/svg+xml">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ============ SKIP LINK ============ -->
+<a class="skip-link" href="#main">Skip to content</a>
+
+<!-- ============ NAV ============ -->
+<header class="site-header" id="site-header">
+  <div class="header-inner">
+    <a href="#hero" class="logo" aria-label="Dean Iyobor — home">
+      <span class="logo-mark" aria-hidden="true">DI</span>
+      <span class="logo-text">
+        <span class="logo-name">Dean Iyobor</span>
+        <span class="logo-role">Software Engineer</span>
+      </span>
+    </a>
+
+    <nav class="primary-nav" id="primary-nav" aria-label="Primary">
+      <ul>
+        <li><a href="#about" data-nav>About</a></li>
+        <li><a href="#skills" data-nav>Skills</a></li>
+        <li><a href="#projects" data-nav>Projects</a></li>
+        <li><a href="#building" data-nav>Building</a></li>
+        <li><a href="#approach" data-nav>Approach</a></li>
+        <li><a href="#contact" data-nav class="nav-cta">Contact</a></li>
+      </ul>
+    </nav>
+
+    <button class="nav-toggle" id="nav-toggle" aria-expanded="false" aria-controls="mobile-nav" aria-label="Open menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+
+  <div class="mobile-nav" id="mobile-nav">
+    <ul>
+      <li><a href="#about" data-nav>About</a></li>
+      <li><a href="#skills" data-nav>Skills</a></li>
+      <li><a href="#projects" data-nav>Projects</a></li>
+      <li><a href="#building" data-nav>Currently Building</a></li>
+      <li><a href="#approach" data-nav>My Approach</a></li>
+      <li><a href="#contact" data-nav>Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<main id="main">
+
+  <!-- ============ HERO ============ -->
+  <section class="hero" id="hero">
+    <div class="hero-inner">
+      <div class="hero-copy reveal">
+        <p class="eyebrow mono">SOFTWARE ENGINEER · FULL-STACK</p>
+        <h1 class="hero-headline">I build software<br>that solves real<br>problems.</h1>
+        <p class="hero-sub">I build web applications, business websites and digital systems designed around real problems  while continuously growing as a software engineer.</p>
+
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary">View my work</a>
+          <a href="#contact" class="btn btn-ghost">Contact me</a>
+        </div>
+
+        <div class="hero-meta">
+          <span class="status-dot" aria-hidden="true"></span>
+          <span class="mono">Currently building &amp; learning</span>
+        </div>
+
+        <ul class="hero-socials" id="hero-socials" aria-label="Social links">
+          <!-- populated by JS -->
+        </ul>
+      </div>
+
+      <aside class="hero-panel reveal" aria-label="Build log summary">
+        <div class="panel-head mono">
+          <span class="panel-dot"></span> build-log.status
+        </div>
+        <div class="panel-body">
+          <div class="panel-row">
+            <span class="panel-label mono">engineer</span>
+            <span class="panel-value">Dean Iyobor</span>
+          </div>
+          <div class="panel-row">
+            <span class="panel-label mono">based_in</span>
+            <span class="panel-value">Benin City, Nigeria</span>
+          </div>
+          <div class="panel-row">
+            <span class="panel-label mono">started</span>
+            <span class="panel-value">~2024, self-taught</span>
+          </div>
+          <div class="panel-divider"></div>
+          <div class="panel-row panel-row-block">
+            <span class="panel-label mono">stack</span>
+            <div class="chip-row" id="hero-stack"></div>
+          </div>
+          <div class="panel-row panel-row-block">
+            <span class="panel-label mono">learning</span>
+            <div class="chip-row chip-row-learning" id="hero-learning"></div>
+          </div>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <!-- ============ ABOUT ============ -->
+  <section class="about" id="about">
+    <div class="section-inner">
+      <p class="section-eyebrow mono">01 / About</p>
+      <div class="about-grid">
+        <h2 class="about-heading">A developer who'd rather ship something useful than perfect something invisible.</h2>
+        <div class="about-copy">
+          <p>I got into software development around 2024, starting with the basics of web development  the usual path of tutorials, small experiments, and a lot of trial and error.</p>
+          <p>Since then I've spent most of my time learning by building: real websites, small web applications, business landing pages, and side projects that started as "what if I built this for myself or a friend." Some were built for people running actual businesses, others were built purely to solve a problem I was personally dealing with.</p>
+          <p>I'm mainly interested in full-stack development and software engineering more broadly. Right now I'm expanding beyond the frontend into backend development, automation, and the parts of engineering that don't show up on a landing page but make software actually work.</p>
+          <p>What keeps me building is the same thing every time: taking an idea or a problem and turning it into something that functions — something a real person can actually use.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ SKILLS ============ -->
+  <section class="skills" id="skills">
+    <div class="section-inner">
+      <p class="section-eyebrow mono">02 / Skills</p>
+      <h2 class="section-heading">What I work with.</h2>
+
+      <div class="skills-grid" id="skills-grid">
+        <!-- populated by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ FEATURED PROJECTS ============ -->
+  <section class="projects" id="projects">
+    <div class="section-inner">
+      <p class="section-eyebrow mono">03 / Featured Projects</p>
+      <h2 class="section-heading">Proof of work, not a template.</h2>
+      <p class="section-lede">Every project below started as a real problem. Each one represents a step in how I'm growing as a software engineer.</p>
+
+      <div class="project-grid" id="project-grid">
+        <!-- populated by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ CURRENTLY BUILDING ============ -->
+  <section class="building" id="building">
+    <div class="section-inner">
+      <p class="section-eyebrow mono">04 / Currently Building</p>
+      <h2 class="section-heading">Building in public. Learning by shipping.</h2>
+      <p class="section-lede">Building practical software systems, expanding into full-stack development, and exploring automation and AI integrations that solve real problems.</p>
+
+      <div class="building-grid" id="building-grid">
+        <!-- populated by JS -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ============ MY APPROACH ============ -->
+  <section class="approach" id="approach">
+    <div class="section-inner">
+      <p class="section-eyebrow mono">05 / My Approach</p>
+      <h2 class="section-heading">I don't just build websites. I build around problems.</h2>
+
+      <ol class="approach-steps">
+        <li class="approach-step reveal">
+          <span class="step-index mono">01</span>
+          <div>
+            <h3>Understand the problem</h3>
+            <p>Before touching code, I figure out what's actually broken or missing — for the user, the business, or myself.</p>
+          </div>
+        </li>
+        <li class="approach-step reveal">
+          <span class="step-index mono">02</span>
+          <div>
+            <h3>Plan the solution</h3>
+            <p>I map out what needs to exist: the core features, the structure, and what technology actually fits the problem.</p>
+          </div>
+        </li>
+        <li class="approach-step reveal">
+          <span class="step-index mono">03</span>
+          <div>
+            <h3>Build the product</h3>
+            <p>I build in working increments, keeping things functional at every stage instead of one long build toward the end.</p>
+          </div>
+        </li>
+        <li class="approach-step reveal">
+          <span class="step-index mono">04</span>
+          <div>
+            <h3>Test and refine</h3>
+            <p>I check it against real use — devices, edge cases, and whether it actually solves what it was meant to solve.</p>
+          </div>
+        </li>
+        <li class="approach-step reveal">
+          <span class="step-index mono">05</span>
+          <div>
+            <h3>Deploy and improve</h3>
+            <p>Shipping isn't the finish line. I keep iterating based on what I learn once something is actually in use.</p>
+          </div>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ============ CONTACT ============ -->
+  <section class="contact" id="contact">
+    <div class="section-inner contact-inner">
+      <p class="section-eyebrow mono">06 / Contact</p>
+      <h2 class="contact-heading">Have a project<br>or opportunity?</h2>
+      <p class="section-lede">Let's build something useful.</p>
+
+      <div class="contact-links" id="contact-links">
+        <!-- populated by JS -->
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<!-- ============ FOOTER ============ -->
+<footer class="site-footer">
+  <div class="section-inner footer-inner">
+    <div>
+      <p class="footer-name">Dean Iyobor</p>
+      <p class="mono footer-role">Software Engineer — Building, learning and shipping.</p>
+    </div>
+    <div class="footer-links" id="footer-links">
+      <!-- populated by JS -->
+    </div>
+    <p class="footer-copy mono">© 2026 Dean Iyobor</p>
+  </div>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
