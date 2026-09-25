@@ -8,7 +8,7 @@ Keep editable portfolio content together in `src/data/portfolio.js`. Keep render
 
 ## Shared data
 
-The content module should expose identity, ordered section IDs, major projects, an initially empty small-project collection, grouped skills, and social/contact links. Keep project records data-driven so Dean can edit names, summaries, and links without searching through presentation markup.
+The editable content module is `src/data/portfolio.js`. It exports identity and About copy, section order, five data-driven major projects, a secondary small-project list, grouped skills, and social/contact links.
 
 ### Identity
 
@@ -17,6 +17,7 @@ export const identity = {
   name: "Dean Iyobor",
   title: "Software Developer & AI Systems Builder",
   positioning: "I build software systems that solve real business problems.",
+  about: "I am a self-taught developer and AI systems builder from Nigeria. I learn by building across full-stack development, AI integrations, automation, and business systems, turning real problems and ideas into usable software.",
 }
 ```
 
@@ -38,95 +39,30 @@ export const sectionOrder = [
 
 ### Major projects
 
-Keep exactly the five in-scope entries below. Each record has editable identity/type/summary fields, a local `preview` image path, known technologies, `github`, and `demo` fields. GitHub stays `"#"` until Dean supplies repository URLs. `highlights`, `flow`, and `status` are optional and only contain details supplied by Dean. Leave technology arrays empty when the stack is not known. Summaries contain only supplied information. Add any later case-study fields only after Dean provides their content.
+Keep exactly five major projects, in this order: FreakiiDesigns, BLAQ PLATE, Studia, AI Receptionist, and Bright Future Tutorials. Records in `src/data/portfolio.js` use `id`, `number`, `name`, `type`, `summary`, `technologies`, `preview`, `github`, and `demo`; `highlights`, `flow`, and `status` appear only where supplied. Keep copy concise and do not infer missing technology stacks.
 
-```js
-export const majorProjects = [
-  {
-    id: "freakiidesigns",
-    number: "01",
-    name: "FreakiiDesigns",
-    type: "Client project · Creative branding studio",
-    summary:
-      "A creative branding and graphic design studio spanning brand identity, social media, events, and print.",
-    highlights: ["Dexter AI", "Sales Lux", "Social media design", "Events", "Print", "Brand identity"],
-    technologies: [],
-    preview: "/projects/freakii-designs.png",
-    github: "#",
-    demo: "https://freakiidesigns.vercel.app/",
-  },
-  {
-    id: "blaq-plate",
-    number: "02",
-    name: "BLAQ PLATE",
-    type: "Restaurant ordering system",
-    summary: "Restaurant/business ordering system designed to reduce dependence on manual WhatsApp and call ordering.",
-    technologies: [],
-    preview: "/projects/blaq-plate.png",
-    github: "#",
-    demo: "https://blaqplate-web.vercel.app/",
-  },
-  {
-    id: "studia",
-    number: "03",
-    name: "Studia",
-    type: "AI-Assisted Learning Platform",
-    status: "In Development / Coming Soon",
-    summary: "AI-powered university testing and course-intelligence platform.",
-    flow: [
-      "Course material",
-      "Course Brain",
-      "AI assessment",
-      "Responses/grading",
-      "Course Intelligence",
-      "Weak areas",
-      "Targeted practice",
-      "Reassessment",
-    ],
-    technologies: ["React", "Supabase", "Tailwind CSS", "TypeScript", "AI"],
-    preview: "/projects/studia.png",
-    github: "#",
-    demo: "https://studia-xi.vercel.app/",
-  },
-  {
-    id: "ai-receptionist",
-    number: "04",
-    name: "AI Receptionist",
-    type: "AI business system",
-    summary:
-      "AI-powered business receptionist/system designed to handle business enquiries and operational workflows.",
-    flow: ["Business enquiries", "AI Receptionist", "Operational workflows"],
-    technologies: ["React", "Supabase", "AI"],
-    preview: "/projects/ai-receptionist.png",
-    github: "#",
-    demo: "https://ai-voice-receptionist-mocha.vercel.app/",
-  },
-  {
-    id: "bright-future-tutorials",
-    number: "05",
-    name: "Bright Future Tutorials",
-    type: "School registration / management system",
-    summary: "A school-focused registration and management system built for a real-world use case.",
-    technologies: ["React", "Firebase"],
-    preview: "/projects/bright-future.png",
-    github: "#",
-    demo: "https://bright-future-tutorials.vercel.app/",
-  },
-]
-```
+| Project | Preview | Known technologies | GitHub | Demo |
+| --- | --- | --- | --- | --- |
+| FreakiiDesigns | `/projects/freakii-designs.png` | Not supplied | `https://github.com/iyobordean-source/freakiidesigns` | `https://freakiidesigns.vercel.app/` |
+| BLAQ PLATE | `/projects/blaq-plate.png` | Not supplied | `https://github.com/iyobordean-source/blaqplate-web` | `https://blaqplate-web.vercel.app/` |
+| Studia | `/projects/studia.png` | React, Supabase, Tailwind CSS, TypeScript, AI | `https://github.com/iyobordean-source/studia` | `https://studia-xi.vercel.app/` |
+| AI Receptionist | `/projects/ai-receptionist.png` | React, Supabase, AI | `https://github.com/iyobordean-source/ai-voice-receptionist` | `https://ai-voice-receptionist-mocha.vercel.app/` |
+| Bright Future Tutorials | `/projects/bright-future.png` | React, Firebase | `https://github.com/iyobordean-source/-Bright-Future-Tutorials` | `https://bright-future-tutorials.vercel.app/` |
 
-Do not add AI WhatsApp Order Brain to this collection.
+Studia is in development / coming soon. Its documented loop is course material, grounded assessment, responses/grading, performance intelligence, weak areas, targeted practice, and reassessment. Bright Future Tutorials includes student registration, records, and administration; do not claim payment tracking unless the implementation is confirmed.
+
+The five local project previews are screenshots captured from their corresponding supplied live websites. Do not add AI WhatsApp Order Brain to Major Projects.
 
 ### Small projects
 
-Use the same editable list pattern and project-link fields for future small projects, but initialize the collection empty. Do not add example objects or project names.
+`smallProjects` is a reusable data-driven list kept visually secondary to Major Projects. It currently contains these two supplied entries:
 
-```js
-export const smallProjects = []
-```
+| Project | Summary | GitHub | Demo |
+| --- | --- | --- | --- |
+| Elegance | Polished frontend project focused on a refined digital experience with responsive UI and visual presentation. | `https://github.com/iyobordean-source/Elegance` | `https://elegance-psi.vercel.app/` |
+| IntelOps | Frontend stats tracker for presenting game/team statistics through a clean interactive interface. | `https://github.com/iyobordean-source/intelops` | `https://intelops-three.vercel.app/` |
 
-When Dean supplies a small project, add its real name and approved summary; initialize its `github` and `demo` fields to `"#"` until he provides the URLs.
-
+Keep the exact URLs shown above. Do not add placeholder entries or invent additional projects.
 ### Skill groups
 
 Keep each group and item as supplied, in the order shown:
@@ -172,4 +108,4 @@ export const socialLinks = {
 
 ## Content boundaries
 
-The current source provides no detailed process steps for How I Build, no biography beyond the identity above, and no case-study metrics or outcome claims. The five `public/projects/` previews are screenshots captured from the corresponding supplied live websites. Do not model AI WhatsApp Order Brain as a major project.
+The current source provides no detailed process steps for How I Build, employment history, awards, or case-study metrics. The About copy is limited to Dean's supplied self-taught background and focus areas. Do not claim Bright Future Tutorials payment tracking unless implementation is confirmed, and do not model AI WhatsApp Order Brain as a major project.

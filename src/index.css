@@ -612,8 +612,9 @@ svg {
 
 .project-copy__meta {
   display: flex;
-  align-items: center;
-  gap: 11px;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  gap: 8px 11px;
   color: var(--quiet);
   font-size: 9px;
 }
@@ -674,6 +675,7 @@ svg {
 
 .project-tech ul {
   display: flex;
+  flex-wrap: wrap;
   gap: 8px;
   margin: 10px 0 0;
   padding: 0;

@@ -27,8 +27,8 @@ Follow the order in `PRODUCT.md`: Hero, What I Build / About the Work, Major Pro
 - **Major Projects:** Give this section substantially more visual emphasis than Small Projects. Use an editorial case-study rhythm with varied, project-specific visual treatments rather than five tiny identical cards. Each entry should explain what the project is, its documented problem or purpose, what Dean built, any supplied technologies, and its GitHub/live-demo controls. Do not fill unsupported fields with invented details.
 - **Project visuals:** Use the local screenshots captured from each supplied live project site as the centerpiece of its major project entry. Keep the image undistorted, responsive, and subtly interactive; do not substitute stock photography or invented interface mockups.
 - **Skills:** Treat the four groups as a substantial part of the portfolio. Use clear group hierarchy and composed text/list treatments; do not make a wall of technology badges.
-- **How I Build / About Dean:** Use only Dean's supplied positioning, name, and title. Do not invent a process, biography, credentials, or personal details.
-- **Small Projects:** Keep the section compact and secondary. The initial collection is empty; do not show invented examples or placeholder project names.
+- **How I Build / About Dean:** Keep How I Build tied to the documented positioning without inventing steps. Present Dean as a self-taught developer and AI systems builder from Nigeria, learning by building across full-stack development, AI integrations, automation, and business systems. Do not invent employment history or credentials.
+- **Small Projects:** Keep Elegance and IntelOps compact and secondary to Major Projects. Use the existing reusable project grid, supplied summaries, and exact links; do not add invented examples.
 - **Contact / Footer:** Keep the supplied contact routes clear and use the exact destinations in `ARCHITECTURE.md`.
 
 ## Avoid

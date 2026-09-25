@@ -2,6 +2,8 @@ export const identity = {
   name: 'Dean Iyobor',
   title: 'Software Developer & AI Systems Builder',
   positioning: 'I build software systems that solve real business problems.',
+  about:
+    'I am a self-taught developer and AI systems builder from Nigeria. I learn by building across full-stack development, AI integrations, automation, and business systems, turning real problems and ideas into usable software.',
 }
 
 export const sectionOrder = [
@@ -23,11 +25,11 @@ export const majorProjects = [
     name: 'FreakiiDesigns',
     type: 'Client project · Creative branding studio',
     summary:
-      'A creative branding and graphic design studio spanning brand identity, social media, events, and print.',
+      'A client project for a creative branding and design studio, bringing brand identity, social media, events, print, and creative presentation into one coherent studio presence.',
     highlights: ['Dexter AI', 'Sales Lux', 'Social media design', 'Events', 'Print', 'Brand identity'],
     technologies: [],
     preview: '/projects/freakii-designs.png',
-    github: '#',
+    github: 'https://github.com/iyobordean-source/freakiidesigns',
     demo: 'https://freakiidesigns.vercel.app/',
   },
   {
@@ -36,10 +38,10 @@ export const majorProjects = [
     name: 'BLAQ PLATE',
     type: 'Restaurant ordering system',
     summary:
-      'A restaurant/business ordering system designed to reduce dependence on manual WhatsApp and call ordering.',
+      'Restaurants often manage orders through separate WhatsApp messages and calls. BLAQ PLATE is an ordering system built to make that process more structured and easier to manage.',
     technologies: [],
     preview: '/projects/blaq-plate.png',
-    github: '#',
+    github: 'https://github.com/iyobordean-source/blaqplate-web',
     demo: 'https://blaqplate-web.vercel.app/',
   },
   {
@@ -49,7 +51,7 @@ export const majorProjects = [
     type: 'AI-Assisted Learning Platform',
     status: 'In Development / Coming Soon',
     summary:
-      'An AI-powered university testing and course-intelligence platform with course material moving through assessment, grading, intelligence, targeted practice, and reassessment.',
+      'An AI-powered university testing and course-intelligence platform that uses course materials to create grounded assessments, analyze student performance, identify weak areas, and generate targeted practice.',
     flow: [
       'Course material',
       'Course Brain',
@@ -62,7 +64,7 @@ export const majorProjects = [
     ],
     technologies: ['React', 'Supabase', 'Tailwind CSS', 'TypeScript', 'AI'],
     preview: '/projects/studia.png',
-    github: '#',
+    github: 'https://github.com/iyobordean-source/studia',
     demo: 'https://studia-xi.vercel.app/',
   },
   {
@@ -71,11 +73,11 @@ export const majorProjects = [
     name: 'AI Receptionist',
     type: 'AI business system',
     summary:
-      'An AI-powered business receptionist/system for handling enquiries and operational workflows.',
+      'An AI-powered business receptionist designed to handle enquiries through receptionist-style interactions, reduce repetitive manual responses, and connect AI with business workflows.',
     flow: ['Business enquiries', 'AI Receptionist', 'Operational workflows'],
     technologies: ['React', 'Supabase', 'AI'],
     preview: '/projects/ai-receptionist.png',
-    github: '#',
+    github: 'https://github.com/iyobordean-source/ai-voice-receptionist',
     demo: 'https://ai-voice-receptionist-mocha.vercel.app/',
   },
   {
@@ -83,15 +85,34 @@ export const majorProjects = [
     number: '05',
     name: 'Bright Future Tutorials',
     type: 'School registration / management system',
-    summary: 'A school-focused registration and management system built for a real-world use case.',
+    summary: 'A school-focused registration and management system for handling student registration, student records, and administration.',
     technologies: ['React', 'Firebase'],
     preview: '/projects/bright-future.png',
-    github: '#',
+    github: 'https://github.com/iyobordean-source/-Bright-Future-Tutorials',
     demo: 'https://bright-future-tutorials.vercel.app/',
   },
 ]
 
-export const smallProjects = []
+export const smallProjects = [
+  {
+    id: 'elegance',
+    name: 'Elegance',
+    type: 'Frontend project',
+    summary:
+      'A polished frontend project focused on building a refined digital experience with responsive UI and visual presentation.',
+    github: 'https://github.com/iyobordean-source/Elegance',
+    demo: 'https://elegance-psi.vercel.app/',
+  },
+  {
+    id: 'intelops',
+    name: 'IntelOps',
+    type: 'Stats tracker',
+    summary:
+      'A frontend stats tracker focused on presenting game/team statistics through a clean interactive interface.',
+    github: 'https://github.com/iyobordean-source/intelops',
+    demo: 'https://intelops-three.vercel.app/',
+  },
+]
 
 export const skillGroups = [
   {

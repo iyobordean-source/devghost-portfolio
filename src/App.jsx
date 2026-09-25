@@ -55,14 +55,7 @@ function ProjectPreview({ project }) {
 }
 
 function ProjectLink({ label, href }) {
-  if (href === '#') {
-    return (
-      <span className="project-link project-link--pending">
-        <span>{label}</span>
-        <span className="project-link__status">URL to be added</span>
-      </span>
-    )
-  }
+  if (!href || href === '#') return null
 
   return (
     <a className="project-link" href={href} target="_blank" rel="noreferrer">
@@ -71,7 +64,6 @@ function ProjectLink({ label, href }) {
     </a>
   )
 }
-
 function ProjectRow({ project }) {
   return (
     <article className="project-row">
@@ -93,7 +85,7 @@ function ProjectRow({ project }) {
         )}
         {project.technologies.length > 0 && (
           <div className="project-tech">
-            <span className="visual-overline">TECHNOLOGIES</span>
+            <span className="visual-overline">BUILT WITH</span>
             <ul aria-label={`${project.name} technologies`}>
               {project.technologies.map((technology) => (
                 <li key={technology}>{technology}</li>
@@ -333,7 +325,7 @@ export default function App() {
             <div className="about-details">
               <span className="about-details__rule" />
               <p>{identity.title}</p>
-              <p className="about-details__statement">Practical software for real-world use cases.</p>
+              <p className="about-details__statement">{identity.about}</p>
             </div>
           </div>
         </section>
@@ -344,18 +336,13 @@ export default function App() {
               <SectionLabel number="06">ADDITIONAL WORK</SectionLabel>
               <h2 id="small-projects-title">Small Projects</h2>
             </div>
-            <p>A separate space for smaller builds. No projects have been added yet.</p>
+            <p>A few focused frontend builds, kept separate from the larger systems.</p>
           </div>
-          {smallProjects.length > 0 ? (
+          {smallProjects.length > 0 && (
             <div className="small-project-grid">
               {smallProjects.map((project) => (
                 <SmallProjectCard key={project.id} project={project} />
               ))}
-            </div>
-          ) : (
-            <div className="small-projects-empty" aria-live="polite">
-              <span className="empty-mark" aria-hidden="true" />
-              <span>Ready for future projects</span>
             </div>
           )}
         </section>

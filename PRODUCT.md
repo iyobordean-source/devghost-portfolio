@@ -30,22 +30,19 @@ Keep sections in this order:
 
 ## Major Projects
 
-The Major Projects section contains these five projects and is the portfolio's primary project showcase. Present each as a serious software or case-study project using only the information below and further details Dean supplies.
+The Major Projects section contains exactly five projects and is the portfolio's primary proof of practical software and client work. Keep project copy concise and scannable: state the problem or purpose, what was built, and why that system matters. Use only project information supplied by Dean.
 
-1. **FreakiiDesigns** — A client project and creative branding/graphic design studio. It represents work including Dexter AI, Sales Lux, social media design, events, print, and brand identity. Treat it as a coherent studio case study, not a loose gallery of graphics.
-2. **BLAQ PLATE** — A restaurant/business ordering system designed to reduce dependence on manual WhatsApp and call ordering. Present it as a software system, not simply a restaurant website.
-3. **Studia** — An AI-powered university testing and course-intelligence platform, currently in development / coming soon. Its concept flow is: course material → Course Brain → AI assessment → responses/grading → Course Intelligence → weak areas → targeted practice → reassessment. Do not describe it as simply an AI tutor or generic quiz generator. Its supplied technologies are React, Supabase, Tailwind CSS, TypeScript, and AI.
-4. **AI Receptionist** — An AI-powered business receptionist/system for handling enquiries and operational workflows. Present it as an AI business system, not simply a chatbot. Do not claim features that are not documented as implemented.
-5. **Bright Future Tutorials** — A school-focused registration/management system built with React and Firebase for an actual use case. Present it as a real-world software system.
+1. **FreakiiDesigns** — A client project for a creative branding and design studio. Present its work across brand identity, social media, events, print, and creative presentation as a coherent studio presence, not a loose gallery or merely a website.
+2. **BLAQ PLATE** — Restaurants often manage orders through manual WhatsApp messages and calls. BLAQ PLATE is an ordering system designed to make that process more structured and easier to manage.
+3. **Studia** — An AI-powered university testing and course-intelligence platform, in development / coming soon. It uses course materials to create grounded assessments, analyze student performance, identify weak areas, and generate targeted practice. Its concept loop is course material → grounded assessment → responses/grading → performance intelligence → weak areas → targeted practice → reassessment. Do not describe it as a generic AI chatbot or quiz generator.
+4. **AI Receptionist** — An AI-powered business receptionist system for handling enquiries through receptionist-style interactions, reducing repetitive manual responses, and connecting AI with business workflows. Do not claim undocumented or unimplemented features.
+5. **Bright Future Tutorials** — A school-focused registration and management system for student registration, student records, and administration. It is built with React and Firebase. Do not claim payment tracking unless its implementation is confirmed.
 
-The real demo URLs supplied for the five projects are recorded in `ARCHITECTURE.md`. Keep GitHub editable as `github: "#"` until Dean provides repository URLs. Use `demo` for live project destinations. Do not search for, infer, or invent any other project URLs.
-
-Each major project should communicate what it is, the documented problem or purpose, what Dean built, relevant technologies where those are known, and its GitHub/live-demo link slots. Omit details that have not been provided; do not fill gaps with assumptions.
+Show a compact **Built with** row when a project's technologies are documented. Do not guess missing stacks. The exact repository and demo URLs are in `ARCHITECTURE.md`; use those values as supplied.
 
 ### Excluded project
 
-Do not include **AI WhatsApp Order Brain** among Major Projects or create a case study for it. It is currently a landing-page/demo concept, not a major completed software project.
-
+Do not include **AI WhatsApp Order Brain** among Major Projects or create a case study for it.
 ## Skills
 
 Skills are an important section. Keep them in these four intentional groups rather than presenting one undifferentiated collection of badges:
@@ -57,12 +54,19 @@ Skills are an important section. Keep them in these four intentional groups rath
 
 ## Small Projects
 
-Provide a separate, reusable Small Projects list/grid for projects Dean may add later. Start with no project entries. Do not invent names, descriptions, or example projects. This section has substantially less visual emphasis than Major Projects.
+Keep Small Projects visually secondary to Major Projects and use the existing reusable project list/grid. Include only these supplied projects:
+
+- **Elegance:** A polished frontend project focused on a refined digital experience with responsive UI and visual presentation.
+- **IntelOps:** A frontend stats tracker for presenting game/team statistics through a clean interactive interface.
+
+Use the exact repository and demo URLs recorded in `ARCHITECTURE.md`. Do not add placeholder project names or invent additional work.
+## About Dean
+
+Present Dean as a self-taught developer and AI systems builder from Nigeria. Emphasize learning by building, full-stack development, AI integrations, automation, and business systems, and turning ideas and real problems into usable software. Do not invent employment history, awards, clients, revenue, or years of experience.
 
 ## Contact
 
-Use the exact social and contact destinations recorded in `ARCHITECTURE.md`. Do not guess project URLs.
-
+Use the exact social and contact destinations recorded in `ARCHITECTURE.md`. Major and small project repository/demo URLs must match that file.
 ## Content boundaries
 
-Do not invent project outcomes, metrics, additional client identities, features, biography details, or process claims. More detailed case-study copy, the How I Build content, and any additional About Dean biography require information from Dean.
+Do not invent project outcomes, metrics, additional client identities, features, biography details, or process claims. Bright Future Tutorials payment tracking may be described only if implementation is confirmed. The How I Build section must not imply an undocumented step-by-step method.
